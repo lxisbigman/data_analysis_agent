@@ -1,0 +1,46 @@
+# 产品与数据库表的映射关系（新增表-模块关联）
+product_table_mapping:
+  ipran:
+    - name: office_data          # 办事处数据表
+      desc: 存储A占比、CD占比等
+      modules: [overview]  # 仅服务于overview和dimension_analysis模块
+    - name: good_data            # 优秀网络数据表
+      desc: 存储网络名称、维度完成数量、CD清除数量等
+      modules: [overview]  # 仅服务于overview模块
+    - name: cd_level_net_analysis                   # CD级分析表
+      desc: 存储CD类型、网络数量、整改建议等
+      modules: [cd_analysis]  # 仅服务于cd_analysis模块
+    - name: hard_change          # 硬件整改表
+      desc: 硬件类型、存储9000E隐患、结温治理等数据
+      modules: [hardware_fix]  # 仅服务于hardware_fix模块
+    - name: dimension_change     # 维度分析表
+      desc: 存储各维度质量数据
+      modules: [dimension_analysis]
+    - name: net_quality          # 网元质量画像表
+      desc: 存储A/B/C/D等级占比
+      modules: [net_quality]
+    - name: old_equipment_backnet # 老旧设备退网表
+      desc: 存储替换数量等
+      modules: [old_equipment_backnet]
+  ran:
+    - name: office_data          # 办事处数据表
+      desc: 存储A占比、CD占比等
+      modules: [overview, dimension_analysis]  # 仅服务于overview和dimension_analysis模块
+    - name: good_data            # 优秀网络数据表
+      desc: 存储网络名称、维度完成数量等
+      modules: [overview]  # 仅服务于overview模块
+    - name: cd                   # CD级分析表
+      desc: 存储CD类型、整改建议等
+      modules: [cd_analysis]  # 仅服务于cd_analysis模块
+    - name: hard_change          # 硬件整改表
+      desc: 存储9000E隐患、结温治理等数据
+      modules: [hardware_fix]  # 仅服务于hardware_fix模块
+    - name: dimension_change     # 维度分析表
+      desc: 存储各维度质量数据
+      modules: [dimension_analysis]
+    - name: net_quality          # 网元质量画像表
+      desc: 存储A/B/C/D等级占比
+      modules: [net_quality]
+    - name: old_equipment_backnet # 老旧设备退网表
+      desc: 存储替换数量等
+      modules: [old_equipment_backnet]
