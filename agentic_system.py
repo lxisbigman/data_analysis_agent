@@ -9,7 +9,7 @@ from agents.analysis_agent import AnalysisAgent
 from agents.report_agent import ReportAgent
 
 logger = logging.getLogger(__name__)
-
+#langgraph节点管理
 
 # 1. 定义统一状态类（Agent间的数据桥梁）
 class AgentState(TypedDict):
